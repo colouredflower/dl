@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="theme-color" content="#ff473e">
-    <title>Files</title>
+    <title>recipes</title>
     <meta property="og:title" content="recipes">
     <meta property="og:locale" content="en_US">
     <meta property="og:url" content="https://www.timetler.com/recipes/">
@@ -41,7 +41,7 @@
   <body>
     <div class="container-lg px-3 my-5 markdown-body">
       <h1>
-        <a href="./">Files</a>
+        <a href="./">recipes</a>
         <form id="search_form" autocomplete="off">
           <input id="search_input">
         </form>
@@ -50,11 +50,10 @@
       </ul>
     </div>
     <script>
-      
+     
       // Match by closest to start of word then earliest word
       const matchScore = (file, filter) => {
-       
-        filter = filter.toLowerCase()
+               filter = filter.toLowerCase()
         let wordIndex;
         let letterPosition;
         for (wordIndex = 0; wordIndex < fileWords.length; wordIndex++) {
@@ -73,21 +72,14 @@
           return matchScore(fileA, filter) < matchScore(fileB, filter) ? -1 : 1;
         }
       }
-      // Render search result list
-      const updateList = (data, filter = '') => {
-        let htmlString = '';
-        for (let file of data.filter(filterFiles(filter)).sort(sortFiles(filter))) {
-     
-          const fileDisplayName = fileName.split('-').join(' ');
-          htmlString += `<li><a href="${fileName}">${fileDisplayName}</a></li>`;
-        }
+
         document.getElementById('list').innerHTML = htmlString;
       }
       // Quick navigate to file if perfect match
       const navigateToFile = (data, filter = '') => {
         files = data.filter(filterFiles(filter));
         if (files.length === 1) {
-         
+          const fileName = files[0].path.replace('.md', '');
           document.location = fileName;
         }
       }
