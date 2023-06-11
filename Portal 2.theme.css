@@ -1,0 +1,24 @@
+/**
+ * @name Basic Background
+ * @description Allows you to use a Background Image without greatly altering the basic Layout of Discord
+ * @author Hardik
+ * @version 1.0
+ * @authorId 870531247032631356
+ * @invite v9u9zqWS2q
+ * @donate https://hardik.live/donate
+ * @website https://hardik.live
+ */
+
+@import url('https://DiscordStyles.github.io/DarkMatter/src/base.css');
+
+/* Variables */
+:root {
+    --avatar-size: 32px;
+    --background-image: url('https://wallpaper.dog/large/3728.jpg');
+    --home-image: url('https://cdn.discordapp.com/attachments/839747190104260630/870310297892683816/portal.gif');
+    --background-solid: #161921;
+    --background-solid-dark: #101218;
+    --background-solid-darker: #0c0e12;
+    --accent: 37, 172, 232;
+    --accent-alt: 29, 101, 134;
+}
