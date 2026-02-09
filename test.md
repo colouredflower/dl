@@ -1,4 +1,4 @@
-<a href="https://downloads.euclidos.org/0:/Bangkk/" style="
+<a href="https://sourceforge.net/projects/euclidos-releases/files/Android-16/munch/euclidOS-v3.2-Axiom-munch-20260208-1831-OFFICIAL.zip/download" style="
   display:inline-block;
   background:linear-gradient(135deg,#2196F3,#0D47A1);
   color:#fff;
