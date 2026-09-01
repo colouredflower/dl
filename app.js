@@ -5482,7 +5482,7 @@
 
 if (UI.dark_mode) {
   document.write(
-    '<meta name="theme-color" content="#273139">'
+    '<meta name="theme-color" content="#0B0F17">'
   );
 }
 if (UI.dark_mode) {
@@ -5520,7 +5520,7 @@ document.write(
 );
 if (UI.dark_mode) {
   document.write(
-    "<style>* {box-sizing: border-box}body{color:rgba(255,255,255,.87);background-color:#1E252F}.mdui-theme-primary-${UI.main_color} .mdui-color-theme{background-color:#1E252F!important} .nexmoe-item{background-color: #ffffff0d!important;box-shadow:0 0.2em 1em rgb(0 0 0 / 30%)!important} .mdui-list-item{border: 1px solid rgb(255 255 255 / 10%)!important}.mdui-toolbar>a:last-child{color: #FFF}.mdui-select-menu{box-shadow: 0 0.2em 1em rgba(100, 100, 100, 0.2)!important} .mdui-text-color-blue-grey-500{color: #e3e4e5 !important} .mdui-textfield-label{color: rgba(255, 255, 255, .54)!important}</style>"
+    "<style>* {box-sizing: border-box}body{color:rgba(255,255,255,.87);background-color:#0B0F17}.mdui-theme-primary-${UI.main_color} .mdui-color-theme{background-color:#0B0F17!important} .nexmoe-item{background-color: #161D29!important;box-shadow:0 0.2em 1em rgb(0 0 0 / 45%)!important} .mdui-list-item{border: 1px solid rgb(255 255 255 / 8%)!important}.mdui-toolbar>a:last-child{color: #FFF}.mdui-select-menu{box-shadow: 0 0.2em 1em rgba(100, 100, 100, 0.2)!important} .mdui-text-color-blue-grey-500{color: #B8C2CF !important} .mdui-textfield-label{color: rgba(220, 230, 240, .55)!important}</style>"
   );
 }
 
