@@ -5595,38 +5595,110 @@ function init() {
 @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
 
 .hardik-signature {
-  position: relative;
   display: inline-block;
+
   font-family: 'Great Vibes', cursive;
-  font-size: 42px;
+  font-size: 44px;
   font-weight: 400;
   letter-spacing: 1px;
 
-  background: linear-gradient(
-    120deg,
-    #222 20%,
-    #555 40%,
-    #111 50%,
-    #555 60%,
-    #222 80%
-  );
-  background-size: 250% auto;
+  color: #f1f5f9;
 
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
+  text-shadow:
+    0 2px 3px rgba(0,0,0,.35),
+    0 5px 14px rgba(255,255,255,.08);
 
-  text-shadow: 0 3px 8px rgba(0,0,0,0.12);
+  animation: signatureFloat 3s ease-in-out infinite;
 
-  animation: hardikShine 4s linear infinite;
-  transition: transform .3s ease, filter .3s ease;
+  transition:
+    transform 0.35s cubic-bezier(.2,.8,.2,1),
+    color 0.35s ease,
+    filter 0.35s ease,
+    text-shadow 0.35s ease;
 }
+
+
+@keyframes signatureFloat {
+
+  0% {
+    transform: translateY(0) rotate(-1deg);
+
+    color: #cbd5e1;
+
+    text-shadow:
+      0 2px 3px rgba(0,0,0,.35),
+      0 5px 12px rgba(255,255,255,.08);
+
+    filter: drop-shadow(0 0 0 rgba(56,189,248,0));
+  }
+
+  25% {
+    transform: translateY(-2px) rotate(0deg);
+
+    color: #e2e8f0;
+
+    text-shadow:
+      0 2px 4px rgba(0,0,0,.35),
+      0 6px 15px rgba(56,189,248,.15);
+
+    filter: drop-shadow(0 0 4px rgba(56,189,248,.10));
+  }
+
+  50% {
+    transform: translateY(-3px) rotate(1deg);
+
+    color: #7dd3fc;
+
+    text-shadow:
+      0 2px 4px rgba(0,0,0,.3),
+      0 6px 20px rgba(56,189,248,.35);
+
+    filter: drop-shadow(0 0 7px rgba(56,189,248,.25));
+  }
+
+  75% {
+    transform: translateY(-2px) rotate(0deg);
+
+    color: #e2e8f0;
+
+    text-shadow:
+      0 2px 4px rgba(0,0,0,.35),
+      0 6px 15px rgba(56,189,248,.15);
+
+    filter: drop-shadow(0 0 4px rgba(56,189,248,.10));
+  }
+
+  100% {
+    transform: translateY(0) rotate(-1deg);
+
+    color: #cbd5e1;
+
+    text-shadow:
+      0 2px 3px rgba(0,0,0,.35),
+      0 5px 12px rgba(255,255,255,.08);
+
+    filter: drop-shadow(0 0 0 rgba(56,189,248,0));
+  }
+}
+
 
 .hardik-signature:hover {
-  transform: scale(1.08) rotate(-2deg);
-  filter: drop-shadow(0 5px 8px rgba(0,0,0,.18));
-}
+  animation-play-state: paused;
 
+  color: #38bdf8;
+
+  transform:
+    translateY(-5px)
+    rotate(-3deg)
+    scale(1.08);
+
+  filter:
+    drop-shadow(0 5px 12px rgba(56,189,248,.4));
+
+  text-shadow:
+    0 2px 4px rgba(0,0,0,.3),
+    0 6px 22px rgba(56,189,248,.4);
+}
 @keyframes hardikShine {
   0% {
     background-position: 250% center;
