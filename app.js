@@ -6009,11 +6009,16 @@ function append_files_to_list(path, files) {
       var ddl_link = p;
       const filepath = path + item.name;
       var c = "file";
-      if (is_lastpage_loaded && item.name == "readme.md" && !UI.hide_readme_md) {
-        get_file(p, item, function (data) {
-          markdown("#readme_md", data);
-        });
-      }
+      if (item.name.toLowerCase() == "readme.md") {
+  if (is_lastpage_loaded && !UI.hide_readme_md) {
+    get_file(p, item, function (data) {
+      markdown("#readme_md", data);
+    });
+  }
+
+  // Don't show README.md in the file list
+  continue;
+}
       if (item.name == "HEAD.md" && !UI.hide_head_md) {
         get_file(p, item, function (data) {
           markdown("#head_md", data);
