@@ -5582,27 +5582,60 @@ function init() {
   `;
   if (UI.credits) {
     html += `
-<div style="margin-bottom: 20px" class="mdui-center mdui-text-center">
+<div style="margin-bottom: 20px; text-align: center;">
   <a href="http://e-z.bio/hardik" target="_blank" style="
     text-decoration: none;
     display: inline-block;
   ">
-    <span style="
-      font-family: 'Arial Black', Arial, sans-serif;
-      font-size: 28px;
-      font-weight: 900;
-      letter-spacing: 3px;
-      color: #fff;
-      text-shadow:
-        0 0 5px rgba(30,137,242,.8),
-        0 0 15px rgba(30,137,242,.6),
-        0 0 30px rgba(30,137,242,.4);
-      transition: all .3s ease;
-    "
-    onmouseover="this.style.textShadow='0 0 8px #1E89F2, 0 0 20px #1E89F2, 0 0 40px #1E89F2'; this.style.transform='scale(1.05)'"
-    onmouseout="this.style.textShadow='0 0 5px rgba(30,137,242,.8), 0 0 15px rgba(30,137,242,.6), 0 0 30px rgba(30,137,242,.4)'; this.style.transform='scale(1)'">
-      HARDIK
-    </span>
+    <span class="hardik-signature">Hardik</span>
+  </a>
+</div>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+
+.hardik-signature {
+  position: relative;
+  display: inline-block;
+  font-family: 'Great Vibes', cursive;
+  font-size: 42px;
+  font-weight: 400;
+  letter-spacing: 1px;
+
+  background: linear-gradient(
+    120deg,
+    #222 20%,
+    #555 40%,
+    #111 50%,
+    #555 60%,
+    #222 80%
+  );
+  background-size: 250% auto;
+
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  text-shadow: 0 3px 8px rgba(0,0,0,0.12);
+
+  animation: hardikShine 4s linear infinite;
+  transition: transform .3s ease, filter .3s ease;
+}
+
+.hardik-signature:hover {
+  transform: scale(1.08) rotate(-2deg);
+  filter: drop-shadow(0 5px 8px rgba(0,0,0,.18));
+}
+
+@keyframes hardikShine {
+  0% {
+    background-position: 250% center;
+  }
+  100% {
+    background-position: -250% center;
+  }
+}
+</style>
   </a>
 </div>
     </div>
