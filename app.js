@@ -5482,9 +5482,10 @@
 
 if (UI.dark_mode) {
   document.write(
-    '<meta name="theme-color" content="#273139">'
+    '<meta name="theme-color" content="#0B0F17">'
   );
 }
+
 if (UI.dark_mode) {
   document.write(
     '<link rel="stylesheet" href="//rawcdn.githack.com/cheems/goindex-extended/b46bb643bb1c1314b669142e5e62d96a877b952b/css/mdui_v2_dark.min.css">'
@@ -5494,6 +5495,7 @@ if (UI.dark_mode) {
     '<link rel="stylesheet" href="//rawcdn.githack.com/cheems/goindex-extended/b46bb643bb1c1314b669142e5e62d96a877b952b/css/mdui_v2.min.css">'
   );
 }
+
 if (UI.dark_mode) {
   document.write(
     '<link rel="stylesheet" href="//rawcdn.githack.com/cheems/goindex-extended/f9af6b2192974a4a9c1b222efed8d29ca6cd1927/css/nexmoe_v2_dark.min.css">'
@@ -5503,26 +5505,331 @@ if (UI.dark_mode) {
     '<link rel="stylesheet" href="//rawcdn.githack.com/cheems/goindex-extended/f9af6b2192974a4a9c1b222efed8d29ca6cd1927/css/nexmoe_v2.min.css">'
   );
 }
+
 document.write(
   '<script src="//rawcdn.githack.com/cheems/goindex-extended/295ceaf2d64b2cb8578b21c0313d75b7bc8738a1/js/mdui.min.js"></script>'
 );
+
 document.write(
   '<script src="//rawcdn.githack.com/cheems/goindex-extended/295ceaf2d64b2cb8578b21c0313d75b7bc8738a1/js/flv.min.js"></script>'
 );
+
 document.write(
   '<script src="//rawcdn.githack.com/cheems/goindex-extended/295ceaf2d64b2cb8578b21c0313d75b7bc8738a1/js/DPlayer.min.js"></script>'
 );
+
 document.write(
   '<script src="//cdn.jsdelivr.net/npm/marked@4.0.0/marked.min.js"></script>'
 );
+
 document.write(
-  "<style>.mdui-appbar .mdui-toolbar{height:56px;font-size:1pc}.mdui-toolbar>i{opacity:.5}.mdui-toolbar>i{padding:0}.mdui-toolbar>a:hover,a.active,a.mdui-typo-headline{opacity:1}.mdui-container{max-width:980px}.mdui-list-item{transition:none}.mdui-list>.th{background-color:initial}.mdui-list-item>a{width:100%;line-height:3pc}.mdui-list-item{margin:2px 0;padding:0}.mdui-toolbar>a:last-child{opacity:1; color: #000}@media screen and (max-width:980px){.mdui-list-item .mdui-text-right{display:none}.mdui-container{width:100%!important;margin:0}}</style>"
+  "<style>" +
+  ".mdui-appbar .mdui-toolbar{height:56px;font-size:1pc}" +
+  ".mdui-toolbar>i{opacity:.5}" +
+  ".mdui-toolbar>i{padding:0}" +
+  ".mdui-toolbar>a:hover,a.active,a.mdui-typo-headline{opacity:1}" +
+  ".mdui-container{max-width:980px}" +
+  ".mdui-list-item{transition:none}" +
+  ".mdui-list>.th{background-color:initial}" +
+  ".mdui-list-item>a{width:100%;line-height:3pc}" +
+  ".mdui-list-item{margin:2px 0;padding:0}" +
+  ".mdui-toolbar>a:last-child{opacity:1;color:#000}" +
+  "@media screen and (max-width:980px){" +
+    ".mdui-list-item .mdui-text-right{display:none}" +
+    ".mdui-container{width:100%!important}" +
+  "}" +
+  "</style>"
 );
+
+
+/* =========================================================
+   🌙 MOON DRIVE DARK THEME
+   ========================================================= */
+
 if (UI.dark_mode) {
-  document.write(
-    "<style>* {box-sizing: border-box}body{color:rgba(255,255,255,.87);background-color:#1E252F}.mdui-theme-primary-${UI.main_color} .mdui-color-theme{background-color:#1E252F!important} .nexmoe-item{background-color: #ffffff0d!important;box-shadow:0 0.2em 1em rgb(0 0 0 / 30%)!important} .mdui-list-item{border: 1px solid rgb(255 255 255 / 10%)!important}.mdui-toolbar>a:last-child{color: #FFF}.mdui-select-menu{box-shadow: 0 0.2em 1em rgba(100, 100, 100, 0.2)!important} .mdui-text-color-blue-grey-500{color: #e3e4e5 !important} .mdui-textfield-label{color: rgba(255, 255, 255, .54)!important}</style>"
-  );
+
+  document.write(`
+    <style>
+
+      /* ---------- BASE ---------- */
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html {
+        background: #0B0F17 !important;
+      }
+
+      body {
+        color: #F1F5F9 !important;
+
+        background:
+          radial-gradient(
+            circle at 50% -12%,
+            rgba(125, 211, 252, 0.09) 0%,
+            rgba(125, 211, 252, 0.035) 20%,
+            transparent 42%
+          ),
+          linear-gradient(
+            180deg,
+            #0B0F17 0%,
+            #090D14 100%
+          ) !important;
+
+        min-height: 100vh;
+      }
+
+
+      /* ---------- MAIN MOON DRIVE SURFACES ---------- */
+
+      .nexmoe-item {
+        background:
+          linear-gradient(
+            145deg,
+            rgba(30, 38, 52, 0.92),
+            rgba(18, 24, 34, 0.94)
+          ) !important;
+
+        border: 1px solid rgba(255,255,255,.065) !important;
+
+        box-shadow:
+          0 12px 35px rgba(0,0,0,.38),
+          0 1px 0 rgba(255,255,255,.035) inset !important;
+
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+      }
+
+
+      /* ---------- NAV ---------- */
+
+      .nav-style {
+        background:
+          linear-gradient(
+            145deg,
+            rgba(31, 40, 54, .96),
+            rgba(18, 24, 34, .96)
+          ) !important;
+
+        border: 1px solid rgba(255,255,255,.065) !important;
+
+        box-shadow:
+          0 10px 30px rgba(0,0,0,.35),
+          0 1px 0 rgba(255,255,255,.035) inset !important;
+      }
+
+
+      /* ---------- FILE LIST ---------- */
+
+      .mdui-list-item {
+
+        background:
+          rgba(255,255,255,.025) !important;
+
+        border:
+          1px solid rgba(255,255,255,.085) !important;
+
+        border-radius: 7px;
+
+        transition:
+          background .25s ease,
+          border-color .25s ease,
+          box-shadow .25s ease,
+          transform .25s ease;
+      }
+
+      .mdui-list-item:hover {
+
+        background:
+          rgba(125,211,252,.045) !important;
+
+        border-color:
+          rgba(125,211,252,.18) !important;
+
+        box-shadow:
+          0 0 20px rgba(56,189,248,.055);
+      }
+
+
+      /* ---------- TEXT ---------- */
+
+      body,
+      .mdui-list-item,
+      .mdui-typo,
+      .mdui-typo-headline,
+      .mdui-toolbar {
+        color: #F1F5F9 !important;
+      }
+
+      .mdui-text-color-blue-grey-500 {
+        color: #AAB6C5 !important;
+      }
+
+
+      /* ---------- HEADINGS ---------- */
+
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        color: #F4F7FB !important;
+      }
+
+
+      /* ---------- LINKS ---------- */
+
+      a {
+        color: #7DD3FC;
+        transition:
+          color .2s ease,
+          text-shadow .2s ease;
+      }
+
+      a:hover {
+        color: #BAE6FD;
+
+        text-shadow:
+          0 0 12px rgba(125,211,252,.18);
+      }
+
+
+      /* ---------- ICONS ---------- */
+
+      .mdui-icon {
+        color: #C7D3E0;
+      }
+
+
+      /* ---------- TOOLBAR ---------- */
+
+      .mdui-toolbar>a:last-child {
+        color: #F4F7FB !important;
+      }
+
+
+      /* ---------- INPUTS ---------- */
+
+      input,
+      textarea,
+      select {
+        color: #F4F7FB !important;
+        background-color: transparent !important;
+      }
+
+      .mdui-textfield-label {
+        color:
+          rgba(255,255,255,.50) !important;
+      }
+
+
+      /* ---------- SELECT MENU ---------- */
+
+      .mdui-select-menu {
+        background:
+          #151C28 !important;
+
+        border:
+          1px solid rgba(255,255,255,.07);
+
+        box-shadow:
+          0 18px 45px rgba(0,0,0,.55) !important;
+      }
+
+
+      /* ---------- DIVIDERS ---------- */
+
+      hr,
+      .mdui-divider {
+        border-color:
+          rgba(255,255,255,.07) !important;
+        opacity: 1;
+      }
+
+
+      /* ---------- README / MARKDOWN ---------- */
+
+      #readme_md,
+      #head_md {
+
+        color: #E8EDF4 !important;
+
+      }
+
+      #readme_md code,
+      #head_md code {
+
+        background:
+          rgba(255,255,255,.06) !important;
+
+        border:
+          1px solid rgba(255,255,255,.06);
+
+        border-radius: 5px;
+      }
+
+      #readme_md pre,
+      #head_md pre {
+
+        background:
+          rgba(0,0,0,.30) !important;
+
+        border:
+          1px solid rgba(255,255,255,.06);
+
+        border-radius: 8px;
+      }
+
+
+      /* ---------- SELECTION ---------- */
+
+      ::selection {
+        background:
+          rgba(56,189,248,.25);
+
+        color:
+          #FFFFFF;
+      }
+
+
+      /* ---------- SUBTLE MOONLIGHT AT BOTTOM ---------- */
+
+      body:after {
+        content: "";
+        position: fixed;
+
+        left: 50%;
+        bottom: -220px;
+
+        width: 600px;
+        height: 400px;
+
+        transform: translateX(-50%);
+
+        background:
+          radial-gradient(
+            ellipse,
+            rgba(125,211,252,.035),
+            transparent 68%
+          );
+
+        pointer-events: none;
+
+        z-index: -1;
+      }
+
+
+    </style>
+  `);
+
 }
+
+
+/* =========================================================
+   OTHER SETTINGS
+   ========================================================= */
 
 if (UI.hide_actions_tab) {
   document.write(
@@ -5530,11 +5837,16 @@ if (UI.hide_actions_tab) {
   );
 }
 
-if(UI.helpURL === '') {
+if (UI.helpURL === '') {
   document.write(
     "<style>.dummyclass2{display: none!important}</style>"
   );
 }
+
+
+/* =========================================================
+   NAV ACCENT COLORS
+   ========================================================= */
 
 const nav_style_colors = {
   "red": {"background-color": "#FF5252", "color": "#FFF"},
@@ -5553,43 +5865,162 @@ const nav_style_colors = {
   "amber": {"background-color": "#FFD740", "color": "#FFF"},
   "orange": {"background-color": "#FFAB40", "color": "#FFF"},
   "deep-orange": {"background-color": "#FF6E40", "color": "#FFF"},
-}
+};
 
 document.write(
-    `<style>.nav-style > a:hover {background-color: ${nav_style_colors[UI.accent_color]["background-color"]}!important; color: ${nav_style_colors[UI.accent_color]["color"]}!important}</style>`
-  );
-
-document.write(
-  "<style>.dummyclass3{max-width: 570px}@media screen and (max-width:980px){.dummyclass3{display:none}}</style>"
+  `<style>
+    .nav-style > a:hover {
+      background-color: ${nav_style_colors[UI.accent_color]["background-color"]}!important;
+      color: ${nav_style_colors[UI.accent_color]["color"]}!important;
+    }
+  </style>`
 );
+
+document.write(
+  "<style>" +
+    ".dummyclass3{max-width:570px}" +
+    "@media screen and (max-width:980px){" +
+      ".dummyclass3{display:none}" +
+    "}" +
+  "</style>"
+);
+
 
 function init() {
   document.siteName = $("title").html();
+
   $("body").addClass(
     `mdui-theme-primary-${UI.main_color} mdui-theme-accent-${UI.accent_color}`
   );
+
   var html = `
 <div class="mdui-container">
-	<div class="mdui-container-fluid">
-		<div id="nav" class="mdui-toolbar nexmoe-item nav-style"> </div>
-    </div>
-	<div class="mdui-container-fluid">
-		<div id="head_md" class="mdui-typo nexmoe-item" style="display:none;padding: 20px 0;"></div>
-		<div id="content" class="nexmoe-item"></div>
-	 	<div id="readme_md" class="mdui-typo nexmoe-item" style="display:none; padding: 20px 0;"></div>
+  <div class="mdui-container-fluid">
+    <div id="nav" class="mdui-toolbar nexmoe-item nav-style"></div>
   </div>
-  <div class="mdui-center mdui-text-center mdui-text-color-blue-grey-5001" style="margin-bottom: 20px">${UI.footer_text}</div>
+
+  <div class="mdui-container-fluid">
+
+    <div
+      id="head_md"
+      class="mdui-typo nexmoe-item"
+      style="display:none;padding:20px 0;"
+    ></div>
+
+    <div id="content" class="nexmoe-item"></div>
+
+    <div
+      id="readme_md"
+      class="mdui-typo nexmoe-item"
+      style="display:none;padding:20px 0;"
+    ></div>
+
+  </div>
+
+  <div
+    class="mdui-center mdui-text-center mdui-text-color-blue-grey-5001"
+    style="margin-bottom:20px"
+  >${UI.footer_text}</div>
   `;
+
   if (UI.credits) {
     html += `
-<div style="margin-bottom: 20px; text-align: center;">
-  <a href="http://e-z.bio/hardik" target="_blank" style="
-    text-decoration: none;
-    display: inline-block;
-  ">
+<div style="margin-bottom:20px;text-align:center;">
+  <a
+    href="http://e-z.bio/hardik"
+    target="_blank"
+    style="text-decoration:none;display:inline-block;"
+  >
     <span class="hardik-signature">Hardik</span>
   </a>
 </div>
+
+<style>
+
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+
+.hardik-signature {
+  display:inline-block;
+
+  font-family:'Great Vibes',cursive;
+  font-size:44px;
+  font-weight:400;
+  letter-spacing:1px;
+
+  color:${UI.dark_mode ? '#E2E8F0' : '#252525'};
+
+  text-shadow:
+    0 2px 3px rgba(0,0,0,.30),
+    0 5px 14px rgba(255,255,255,.08);
+
+  animation:signatureFloat 3s ease-in-out infinite;
+
+  transition:
+    transform .35s cubic-bezier(.2,.8,.2,1),
+    color .35s ease,
+    filter .35s ease,
+    text-shadow .35s ease;
+}
+
+@keyframes signatureFloat {
+
+  0% {
+    transform:translateY(0) rotate(-1deg);
+    color:${UI.dark_mode ? '#CBD5E1' : '#252525'};
+    filter:drop-shadow(0 0 0 rgba(56,189,248,0));
+  }
+
+  25% {
+    transform:translateY(-2px) rotate(0deg);
+    color:${UI.dark_mode ? '#E2E8F0' : '#333'};
+    filter:drop-shadow(0 0 4px rgba(56,189,248,.10));
+  }
+
+  50% {
+    transform:translateY(-3px) rotate(1deg);
+    color:${UI.dark_mode ? '#7DD3FC' : '#1E89F2'};
+    filter:drop-shadow(0 0 7px rgba(56,189,248,.25));
+  }
+
+  75% {
+    transform:translateY(-2px) rotate(0deg);
+    color:${UI.dark_mode ? '#E2E8F0' : '#333'};
+    filter:drop-shadow(0 0 4px rgba(56,189,248,.10));
+  }
+
+  100% {
+    transform:translateY(0) rotate(-1deg);
+    color:${UI.dark_mode ? '#CBD5E1' : '#252525'};
+    filter:drop-shadow(0 0 0 rgba(56,189,248,0));
+  }
+
+}
+
+.hardik-signature:hover {
+
+  animation-play-state:paused;
+
+  color:${UI.dark_mode ? '#38BDF8' : '#1E89F2'};
+
+  transform:
+    translateY(-5px)
+    rotate(-3deg)
+    scale(1.08);
+
+  filter:
+    drop-shadow(0 5px 12px rgba(56,189,248,.40));
+
+  text-shadow:
+    0 2px 4px rgba(0,0,0,.30),
+    0 6px 22px rgba(56,189,248,.40);
+}
+
+</style>
+`;
+  }
+
+  $("body").html(html);
+}
 
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
